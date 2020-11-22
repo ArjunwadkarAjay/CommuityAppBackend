@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "purpose": {
+      "type": "string"
+    },
+    "conducted_on": {
+      "type": "datetime"
+    },
+    "details": {
+      "type": "text"
+    },
+    "poster": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

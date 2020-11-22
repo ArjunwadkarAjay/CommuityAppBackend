@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "converstions",
+  "info": {
+    "name": "converstion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "message": {
+      "type": "richtext"
+    },
+    "username": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    }
+  }
+}

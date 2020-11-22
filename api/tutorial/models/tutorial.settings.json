@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tutorials",
+  "info": {
+    "name": "resource",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "topic": {
+      "type": "string"
+    },
+    "published_on": {
+      "type": "date"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "author": {
+      "type": "string"
+    },
+    "poster": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "resource_type": {
+      "type": "string"
+    }
+  }
+}
